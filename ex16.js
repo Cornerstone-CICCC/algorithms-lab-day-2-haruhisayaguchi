@@ -5,5 +5,5 @@
 const numbers = [3, 10, 15, 7, 22, 18]
 
 console.log(
-  numbers
+  numbers.filter(n => n % 2 === 0).reduce((sum, n) => sum + n * 2, 0)
 ) // Expected output: 100

@@ -11,4 +11,8 @@ const books = [
 
 console.log(
   books
+    .filter(book => book.available)
+    .sort((a, b) => a.title.length - b.title.length)
+    .slice(0, 2)
+    .map(book => book.title.toUpperCase())
 ) // Expected output: ["DUNE", "IT"]
